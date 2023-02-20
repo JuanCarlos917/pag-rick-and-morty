@@ -10,6 +10,19 @@ root.render(
     <App />
   </React.StrictMode>
 );
+//con cambia el nombre de la pestaña
+let previousTitle = document.title
+window.addEventListener('blur',()=>{
+    previousTitle = document.title
+    document.title = 'No te vayas!! Vuelve'
+})
+
+//devuelve el titulo original
+window.addEventListener('focus',()=>{
+    document.title = previousTitle
+})
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
