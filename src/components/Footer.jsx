@@ -21,18 +21,15 @@ export default function Footer() {
 						</figure>
 					</div>
 				</div>
-				<div class='box'></div>
-				<h2>SOBRE NOSOTROS</h2>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Facilis ex impedit mollitia sed? Quisquam veritatis veniam,
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Facilis ex impedit mollitia sed? Quisquam
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat tempora quis id aliquid nemo harum consequuntur ut recusandae enim voluptas odit, molestias, corporis quaerat ullam nobis. Illo accusantium distinctio nesciunt
-				</p>
 				<div class='box'>
+					<h2>SOBRE NOSOTROS</h2>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Facilis ex impedit mollitia sed? Quisquam veritatis
+						veniam, Lorem ipsum dolor sit amet consectetur
+						adipisicing elit. Facilis ex impedit mollitia sed?
+						Quisquam
+					</p>
 					<h2>SÍGUENOS</h2>
 					<div class='red-social'>
 						<a href='#!'>
