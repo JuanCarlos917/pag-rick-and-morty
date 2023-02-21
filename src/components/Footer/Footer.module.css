@@ -1,0 +1,43 @@
+.containerfigure {
+	display: flex;
+	background-color: var(--clrRosa);
+	width: 100%;
+	padding: 20px;
+	border-radius: 235px 52px 193px 0;
+}
+.footerlogo {
+	display: flex;
+	width: 100%;
+	margin: 10px;
+}
+.mainfooter {
+	width: 100%;
+	background-color: var(--clrVerde);
+}
+.mainfooter .grupo1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 55px 0 0 0;
+}
+.redesociales {
+	padding: 2px;
+	margin: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: var(--clrRosa);
+	box-shadow: 4px 6px 12px 0 rgba(0, 0, 0, 0.6);
+}
+p {
+	font-size: 20px;
+	margin: 4px;
+	text-align: justify;
+	padding: 0 10px 0 10px;
+}
+small {
+	color: #000;
+	font-size: 13px;
+	font-weight: 600;
+}

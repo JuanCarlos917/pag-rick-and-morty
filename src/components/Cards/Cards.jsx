@@ -1,11 +1,12 @@
-import Card from './Card';
+import Card from '../Card/Card';
+import styles from './Cards.module.css';
 
 export default function Cards(props) {
 	const { characters } = props;
 	return (
 		<div>
-			<div class='container-card'>
-				<h3 class='card-length'>
+			<div className={styles.containercard}>
+				<h3 className={styles.cardlength}>
 					personajes cargados: {characters.length}
 				</h3>
 			</div>

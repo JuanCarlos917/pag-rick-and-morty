@@ -1,0 +1,21 @@
+.containercard {
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	background-color: var(--clrRosa);
+	border-radius: 70px 100% 0 15px;
+	padding: 10px;
+	border: 3px solid var(--clrAzul);
+}
+
+.cardlength {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--clrVerde);
+	padding: 10px;
+	border-radius: 50px 40px 25px 1px;
+	box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+	border: 3px solid var(--clrAzul);
+}
