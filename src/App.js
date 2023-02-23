@@ -10,7 +10,7 @@ import Footer from './components/Footer/Footer';
 function App() {
 	return (
 		<div className='App'>
-			<Header className='header-title' title='' />
+			<Header title='' />
 			<SearchBar onSearch={(characterID) => window.alert(characterID)} />
 			<Card
 				name={Rick.name}
