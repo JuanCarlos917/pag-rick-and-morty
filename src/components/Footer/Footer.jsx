@@ -4,6 +4,7 @@ import twitter from '../assets/imgram/Twitter.png';
 import linkedin from '../assets/imgram/LinkedIn.png';
 import logo_rick_and_morty from '../assets/imgram/Rick_and_Morty.svg.png';
 import styles from './Footer.module.css';
+import {Link, NavLink} from 'react-router-dom';
 
 export default function Footer() {
 	return (
@@ -23,7 +24,9 @@ export default function Footer() {
 					</div>
 				</div>
 				<div className={styles.box}>
-					<h2>SOBRE NOSOTROS</h2>
+                    <NavLink to='/about'>
+					<h2>ABOUT</h2>
+                    </NavLink>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
 						Facilis ex impedit mollitia sed? Quisquam veritatis
@@ -33,38 +36,38 @@ export default function Footer() {
 					</p>
 					<h2>SÍGUENOS</h2>
 					<div className={styles.redsocial}>
-						<a href='#!'>
+						<Link >
 							<img
 								src={facebook}
 								alt='logo facebook'
 								className={styles.redesociales}
 								id='facebook'
 							/>
-						</a>
-						<a href='#!'>
+						</Link>
+						<Link >
 							<img
 								src={instagram}
 								alt='logo instagram'
 								className={styles.redesociales}
 								id='instagram'
 							/>
-						</a>
-						<a href='#!'>
+						</Link>
+						<Link>
 							<img
 								src={twitter}
 								alt='logo twitter'
 								className={styles.redesociales}
 								id='twitter'
 							/>
-						</a>
-						<a href='#!'>
+						</Link>
+						<Link href='#!'>
 							<img
 								src={linkedin}
 								alt='logo linkedin'
 								className={styles.redesociales}
 								id='linkedin'
 							/>
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>

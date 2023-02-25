@@ -11,9 +11,10 @@ export default function Cards(props) {
 					personajes cargados: {characters.length}
 				</h3>
 			</div>
-			{characters.map((character) => {
+			{characters.length && characters.map((character) => {
 				return (
 					<Card
+                        id={character.id}
                         key={character.id}
 						name={character.name}
 						species={character.species}

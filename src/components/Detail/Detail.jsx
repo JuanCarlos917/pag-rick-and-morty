@@ -11,7 +11,7 @@ export default function Detail(props) {
 	const API_KEY = '1b88bdb6d72a.fbb4ede0d66b229d0d0b';
 
 	useEffect(() => {
-		fetch(`${URL_BASE}/character/${character}?key=${API_KEY}`)
+		fetch(`${URL_BASE}/character/${detailId}?key=${API_KEY}`)
 			.then((response) => response.json())
 			.then((char) => {
 				if (char.name) {
@@ -26,10 +26,12 @@ export default function Detail(props) {
 		return setCharacter({});
 	}, [detailId]);
 
-	console.log(character);
 
 	return (
 		<div>
+        <Link to='/home'>
+            <button >Back</button>
+        </Link>
 			<h1>Detail</h1>
 			<h2>{character.name}</h2>
 			<img src={character.image} alt={character.name} />

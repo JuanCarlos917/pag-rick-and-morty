@@ -1,36 +1,26 @@
-import logo_rick_and_morty from '../assets/imgram/Rick_and_Morty.svg.png'
-import styles from './Header.module.css'
-import SearchBar from '../SearchBar/SearchBar'
+import logo_rick_and_morty from '../assets/imgram/Rick_and_Morty.svg.png';
+import styles from './Header.module.css';
+import SearchBar from '../SearchBar/SearchBar';
+import { NavLink } from 'react-router-dom';
 
 export default function Header(props) {
 	return (
 		<header className={styles.header}>
-			<a href='#!' className={styles.headerlogo}>
+			<NavLink to='/home' className={styles.headerlogo}>
 				<img
 					className={styles.logorickandmorty}
 					src={logo_rick_and_morty}
-					alt=''
+					alt={props.name}
 				/>
-			</a>
-			<div className={styles.main}>
-				<ul>
-					<li className={styles.liuno}>
-						<a href='#!' data-text='&nbsp;Home'>
-							&nbsp;Home&nbsp;{' '}
-						</a>
-					</li>
-					<li className={styles.lidos}>
-						<a href='#!' data-text='&nbsp;Cards'>
-							&nbsp;Cards&nbsp;{' '}
-						</a>
-					</li>
-					<li className={styles.litres}>
-						<a href='#!' data-text='&nbsp;About'>
-							&nbsp;About&nbsp;{' '}
-						</a>
-					</li>
-				</ul>
-			</div>
+			</NavLink>
+
+			<NavLink to='/home'>
+				<button> home </button>
+			</NavLink>
+			<NavLink to='/about'>
+				<button>About</button>
+			</NavLink>
+
 			<SearchBar onSearch={props.onSearch} />
 		</header>
 	);
