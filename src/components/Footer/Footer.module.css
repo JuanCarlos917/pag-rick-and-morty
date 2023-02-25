@@ -1,3 +1,8 @@
+footer {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
 .containerfigure {
 	display: flex;
 	background-color: var(--clrRosa);

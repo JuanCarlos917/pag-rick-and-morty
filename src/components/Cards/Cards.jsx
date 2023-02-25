@@ -3,6 +3,7 @@ import styles from './Cards.module.css';
 
 export default function Cards(props) {
 	const { characters } = props;
+
 	return (
 		<div>
 			<div className={styles.containercard}>
@@ -13,12 +14,12 @@ export default function Cards(props) {
 			{characters.map((character) => {
 				return (
 					<Card
+                        key={character.id}
 						name={character.name}
 						species={character.species}
 						gender={character.gender}
 						image={character.image}
-						onClose={() =>
-							window.alert('Emulamos que se cierra la card')
+						onClose={() => props.onClose(character.id)
 						}
 					/>
 				);

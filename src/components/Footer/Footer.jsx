@@ -7,7 +7,7 @@ import styles from './Footer.module.css';
 
 export default function Footer() {
 	return (
-		<div className={styles.mainfooter}>
+		<footer className={styles.mainfooter}>
 			<div className={styles.grupo1}>
 				<div className={styles.box}>
 					<div className={styles.containerfigure}>
@@ -74,6 +74,6 @@ export default function Footer() {
 					reserved | Terms Of Service | Privacy
 				</small>
 			</div>
-		</div>
+		</footer>
 	);
 }

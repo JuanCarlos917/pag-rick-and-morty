@@ -1,6 +1,7 @@
 import styles from './Card.module.css';
 
 export default function Card({ name, species, gender, image, onClose }) {
+
 	return (
 		<div className={styles.cardcontainer}>
 			<button onClick={onClose} className={styles.buttoncard}>
@@ -15,7 +16,7 @@ export default function Card({ name, species, gender, image, onClose }) {
 				<img
 					src={image}
 					className={styles.imgcard}
-					alt='imagen de Rick'
+					alt={name}
 				/>
 			</section>
 		</div>

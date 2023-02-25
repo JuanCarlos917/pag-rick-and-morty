@@ -15,4 +15,5 @@ body {
 	background-image: url('./components/assets/imgram/logo-rick-and-morty.jpg');
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
 }

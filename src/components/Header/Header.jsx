@@ -12,7 +12,6 @@ export default function Header(props) {
 					alt=''
 				/>
 			</a>
-			<h1 className={styles.headertitle}>{props.title}</h1>
 			<div className={styles.main}>
 				<ul>
 					<li className={styles.liuno}>
