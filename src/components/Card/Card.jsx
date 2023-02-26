@@ -1,5 +1,5 @@
 import styles from './Card.module.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function Card({ name, species, gender, image, onClose, id }) {
 	return (
@@ -13,9 +13,11 @@ export default function Card({ name, species, gender, image, onClose, id }) {
 				<h2 className={styles.subtitulocard}>Genero: {gender}</h2>
 			</div>
 			<section>
-				<Link to={`/detail/${id}`}>
+				<img src={image} className={styles.imgcard} alt={name} />
+
+				{/* <Link to={`/detail/${id}`}>
 					<img src={image} className={styles.imgcard} alt={name} />
-				</Link>
+				</Link> */}
 			</section>
 		</div>
 	);
