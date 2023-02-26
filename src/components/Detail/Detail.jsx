@@ -1,8 +1,8 @@
 //import styles from './Detail.module.css';
-import { useParams } from 'react-router-dom';
+import { Link ,useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-//falta importar  Link
+
 
 export default function Detail(props) {
 	//console.log(useParams());
@@ -31,11 +31,9 @@ export default function Detail(props) {
 
 	return (
 		<div>
+        <Link to='/home' >
 			<button>Back</button>
-
-			{/* <Link to='/home'>
-				<button>Back</button>
-			</Link> */}
+        </Link>
 			<h1>Detail</h1>
 			<h2>{character.name}</h2>
 			<img src={character.image} alt={character.name} />
