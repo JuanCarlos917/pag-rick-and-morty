@@ -20,6 +20,9 @@ export default function Header(props) {
             <NavLink to='/about'>
                 <button>About</button>
             </NavLink>
+            <NavLink to='/'>
+                <button>Logout</button>
+            </NavLink>
 			    <SearchBar onSearch={props.onSearch} />
 		</header>
 	);
