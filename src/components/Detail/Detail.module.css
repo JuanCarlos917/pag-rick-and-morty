@@ -1,3 +1,11 @@
-h1 {
-	font-size: 22rem;
+.containerDetail {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.childrenDetail {
+	display: flex;
+	flex-direction: column;
+}
+.titleDetail {
 }

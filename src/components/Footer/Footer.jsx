@@ -13,20 +13,20 @@ export default function Footer() {
 				<div className={styles.box}>
 					<div className={styles.containerfigure}>
 						<figure>
-                        <Link to='/home'>
-							<img
-								src={logo_rick_and_morty}
-								alt='rick and morty'
-								className={styles.footerlogo}
-							/>
-                        </Link>
+							<Link to='/home'>
+								<img
+									src={logo_rick_and_morty}
+									alt='rick and morty'
+									className={styles.footerlogo}
+								/>
+							</Link>
 						</figure>
 					</div>
 				</div>
 				<div className={styles.box}>
-                    <Link to='/about' >
-					<h2>ABOUT</h2>
-                    </Link>
+					<Link to='/about'>
+						<h2>ABOUT</h2>
+					</Link>
 
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -37,13 +37,14 @@ export default function Footer() {
 					</p>
 					<h2>SÍGUENOS</h2>
 					<div className={styles.redsocial}>
-						<img
-							src={facebook}
-							alt='logo facebook'
-							className={styles.redesociales}
-							id='facebook'
-						/>
-
+						<Link to='/https://www.xtrafondos.com/recortar/4727'>
+							<img
+								src={facebook}
+								alt='logo facebook'
+								className={styles.redesociales}
+								id='facebook'
+							/>
+						</Link>
 						<img
 							src={instagram}
 							alt='logo instagram'
@@ -63,7 +64,6 @@ export default function Footer() {
 							className={styles.redesociales}
 							id='linkedin'
 						/>
-
 					</div>
 				</div>
 			</div>
