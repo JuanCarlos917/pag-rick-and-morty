@@ -1,4 +1,5 @@
 import styles from './Form.module.css';
+import validation from './validate';
 import { useState } from 'react'
 
 export default function FormLogin({login}) {
@@ -15,51 +16,27 @@ export default function FormLogin({login}) {
             ...userData,
             [e.target.name]: e.target.value
         })
+        setError(validation({
+            ...userData,
+            [e.target.name]: e.target.value
+        }))
     }
 
-    const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(userData.userName === ''){
-            setError({
-                ...error,
-                userName: 'El campo no puede estar vacio'
-            })
-        }else{
-            setError({
-                ...error,
-                userName: ''
-            })
-        }
-        if(userData.password === ''){
-            setError({
-                ...error,
-                password: 'El campo no puede estar vacio'
-            })
-        }else{
-            setError({
-                ...error,
-                password: ''
-            })
-        }
-        if(userData.userName !== '' && userData.password !== ''){
-            login(userData)
-        }
-        if(!regexEmail.test(userData.userName)){
-            setError({
-                ...error,
-                userName: 'El email no es valido'
-            })
-        }
+        setError(validation(userData))
+        login(userData)
+
     }
 
     return (
 		<div className={styles.container}>
 			<form onSubmit={handleSubmit}>
             <div>
-				<label for='email'>User Name</label>
+				<label for='email'>Username</label>
 				<input
 					type='email'
+                    value={userData.userName}
 					id='email'
 					name='userName'
 					placeholder='Email'
@@ -72,6 +49,7 @@ export default function FormLogin({login}) {
 				<label for='password'>Password</label>
 				<input
 					type='password'
+                    value={userData.password}
 					id='password'
 					name='password'
 					placeholder='Password'

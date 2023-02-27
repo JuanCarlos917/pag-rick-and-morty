@@ -36,7 +36,7 @@ function App() {
 		const [access, setAcces] = useState(false);
 
 		const userName = 'prueba@gmail.com';
-		const password = '1234';
+		const password = '1234567';
 
 		function login(userData) {
 			if (userData.password === password && userData.userName === userName) {
