@@ -12,6 +12,30 @@ import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
 function App() {
 	const [characters, setCharacters] = useState([]);
+    const [access, setAcces] = useState(false);
+    const userName = 'prueba@gmail.com';
+	const password = '1234567';
+    const navigate = useNavigate();
+
+    function login(userData) {
+		if (
+			userData.password === password &&
+			userData.userName === userName
+		) {
+			setAcces(true);
+				setCharacters([]);
+				navigate('/home');
+		} else {
+			window.alert('Usuario o contraseña incorrectos');
+			}
+	}
+    useEffect(() => {
+		!access && navigate('/');
+	});
+    //se comenta esta linea ya que [access] genera un error
+    // useEffect(() => {
+	// 	!access && navigate('/');
+	// }, [access]);
 
 	const URL_BASE = 'https://be-a-rym.up.railway.app/api';
 	const API_KEY = '1b88bdb6d72a.fbb4ede0d66b229d0d0b';
@@ -32,24 +56,8 @@ function App() {
 	};
 
         const { pathname } = useLocation();
-		const navigate = useNavigate();
-		const [access, setAcces] = useState(false);
 
-		const userName = 'prueba@gmail.com';
-		const password = '1234567';
 
-		function login(userData) {
-			if (userData.password === password && userData.userName === userName) {
-				setAcces(true);
-                setCharacters([]);
-				navigate('/home');
-			} else {
-                window.alert('Usuario o contraseña incorrectos');
-			}
-		}
-		useEffect(() => {
-			!access && navigate('/');
-		}, [access]);
 
         console.log('acces', access);
 		console.log('Uselocation ', pathname);
