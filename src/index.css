@@ -6,14 +6,20 @@
 }
 * {
 	margin: 0;
-	padding: 0;
+	padding: 1em;
 	box-sizing: border-box;
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
 }
 body {
 	background-image: url('./components/assets/imgram/logo-rick-and-morty.jpg');
-	background-size: cover;
+	background-size: 100% auto;
 	background-position: bottom center;
 	background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+	body {
+		font-size: 0.8rem;
+		background-size: cover;
+	}
 }

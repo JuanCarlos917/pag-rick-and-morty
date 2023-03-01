@@ -9,9 +9,9 @@ export default function Card({ name, species, gender, image, onClose, id }) {
 				Close
 			</button>
 			<div className={styles.containersubtitulo}>
-				<h2 className={styles.subtitulocard}>Nombre: {name}</h2>
-				<h2 className={styles.subtitulocard}>Especie: {species}</h2>
-				<h2 className={styles.subtitulocard}>Genero: {gender}</h2>
+				<h2 className={styles.subtitulocard}>{name}</h2>
+				<p className={styles.subtitulocard}>Especie: {species}</p>
+				<p className={styles.subtitulocard}>Genero: {gender}</p>
 			</div>
 			<Link to={`/detail/${id} `}>
 				<section>

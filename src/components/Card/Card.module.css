@@ -1,31 +1,53 @@
 .cardcontainer {
 	display: flex;
-	flex-direction: row-reverse;
-	justify-content: left;
+	flex-direction: row;
 	align-items: center;
-	margin-left: 5px;
 }
+
 .containersubtitulo {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: var(--clrAmarillo);
-	padding: 10px;
-	border-radius: 10px;
+	padding: 1rem;
+	border-radius: 1rem;
 	box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
-	margin: 0 30px 0 30px;
+	margin: 0 2rem;
 }
+
+.buttoncard {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.subtitulocard {
+	font-size: 2rem;
+	color: var(--clrAzul);
+	background-color: var(--clrAmarillo);
+	margin: 1rem;
+}
+
+.imgcard {
+	border-radius: 10%;
+	border: 0.5rem solid var(--clrAmarillo);
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+}
+
 button {
 	background-color: var(--clrAmarillo);
 	cursor: pointer;
 	border: none;
-	padding: 10px 21px;
+	padding: 1rem 2.1rem;
 	color: var(--clrRosa);
-	font-size: 12px;
+	font-size: 1rem;
 	font-weight: bold;
 	position: relative;
-	border-radius: 12px;
+	border-radius: 1.2rem;
 }
 button::before {
 	content: '';
@@ -47,8 +69,8 @@ button::before {
 		var(--clrAmarillo)
 	);
 	background-size: 800%;
-	border-radius: 10px;
-	filter: blur(8px);
+	border-radius: 1rem;
+	filter: blur(0.8rem);
 	animation: glowing 20s linear infinite;
 }
 @keyframes glowing {
@@ -66,19 +88,13 @@ button:hover {
 	background-color: var(--clrRosa);
 	color: var(--clrVerde);
 }
-.buttoncard {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-}
-.subtitulocard {
-	font-size: 20px;
-	color: var(--clrAzul);
-	background-color: var(--clrAmarillo);
-	margin: 10px;
-}
-.imgcard {
-	border-radius: 10%;
-	border: 10px solid var(--clrAmarillo);
+
+@media (max-width: 768px) {
+	.containersubtitulo {
+		margin: 0 1rem;
+	}
+
+	.subtitulocard {
+		font-size: 1.5rem;
+	}
 }

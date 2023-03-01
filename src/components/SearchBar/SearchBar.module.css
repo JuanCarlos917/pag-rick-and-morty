@@ -6,13 +6,13 @@
 
 .searchInput {
 	position: relative;
-	width: 60px;
-	height: 50px;
+	width: 1rem;
+	height: 3rem;
 	border-radius: 15px;
-	padding: 10px;
+	padding: 1rem;
 	transition-duration: 500ms;
 	cursor: pointer;
-	font-size: 15px;
+	font-size: 12px;
 	background-image: url('../../components/assets/imgram/Reddit.png');
 	background-repeat: no-repeat;
 	background-size: 70px;
@@ -30,7 +30,6 @@
 .searchInput:focus {
 	width: 200px;
 	cursor: text;
-	padding-left: 100px;
 	color: var(--clrRosa);
 	outline: none;
 	background-color: var(--clrAmarillo);
@@ -46,5 +45,47 @@
 }
 
 .searchButton {
-	margin: 20px;
+	margin: 2px;
+}
+
+/* estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+	.searchBar {
+		justify-content: center;
+	}
+
+	.searchInput {
+		width: 100%;
+		max-width: 300px;
+		background-position: 10px 50%;
+	}
+
+	.searchInput:focus {
+		padding-left: 20px;
+	}
+
+	.searchButton {
+		margin: 0px;
+	}
+}
+
+/* estilos para pantallas más grandes */
+@media (min-width: 768px) {
+	.searchBar {
+		justify-content: right;
+	}
+
+	.searchInput {
+		width: 60px;
+		max-width: none;
+		background-position: 45% 50%;
+	}
+
+	.searchInput:focus {
+		padding-left: 100px;
+	}
+
+	.searchButton {
+		margin: 20px;
+	}
 }

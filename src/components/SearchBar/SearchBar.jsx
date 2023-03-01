@@ -16,7 +16,7 @@ export default function SearchBar({onSearch}) {
 			<button
 				className={styles.searchButton}
 				// onClick={() => clearAll('')}
-                >
+			>
 				Clear
 			</button>
 			<button
@@ -30,7 +30,7 @@ export default function SearchBar({onSearch}) {
 				id='search'
 				onChange={(e) => setCharcter(e.target.value)}
 				className={styles.searchInput}
-			/>
+			/>{' '}
 			<button
 				onClick={() => onSearch(character)}
 				className={styles.searchButton}>

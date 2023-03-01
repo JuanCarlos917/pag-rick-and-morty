@@ -15,13 +15,13 @@ export default function Header(props) {
 			    />
             </NavLink>
             <NavLink to='/home'>
-			    <button> home </button>
+			<p> home </p>
             </NavLink>
             <NavLink to='/about'>
-                <button>About</button>
+                <p>About</p>
             </NavLink>
             <NavLink to='/'>
-                <button>Logout</button>
+                <p>Logout</p>
             </NavLink>
 			    <SearchBar onSearch={props.onSearch} />
 		</header>
