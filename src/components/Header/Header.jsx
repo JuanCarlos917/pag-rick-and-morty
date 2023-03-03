@@ -4,6 +4,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import { NavLink } from 'react-router-dom';
 
 export default function Header(props) {
+
 	return (
 		<header className={styles.header}>
 			<NavLink to='/home'>
@@ -22,7 +23,11 @@ export default function Header(props) {
 			<NavLink to='/'>
 				<p>Logout</p>
 			</NavLink>
+			<NavLink to='/favorites'>
+				<p>Favorites</p>
+			</NavLink>
 			<SearchBar onSearch={props.onSearch} />
 		</header>
 	);
 }
+

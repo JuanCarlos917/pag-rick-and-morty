@@ -1,6 +1,7 @@
 import './App.css';
 import Cards from './components/Cards/Cards.jsx';
 import Header from './components/Header/Header.jsx';
+import Favorites from './components/Favorites/Favorites.jsx';
 import About from './components/About/About.jsx';
 import Detail from './components/Detail/Detail.jsx';
 import Footer from './components/Footer/Footer.jsx';
@@ -57,29 +58,25 @@ function App() {
 
         const { pathname } = useLocation();
 
-
-
-        console.log('acces', access);
-		console.log('Uselocation ', pathname);
-
 	return (
 		<div className='App'>
-			{pathname.length>1 && <Header onSearch={onSearch} />}
+			{pathname.length > 1 && <Header onSearch={onSearch} />}
 
 			<Routes>
-				<Route path='/' element={<Form login={login}/>} />
+				<Route path='/' element={<Form login={login} />} />
 				<Route
 					path='/home'
 					element={
 						<Cards characters={characters} onClose={onClose} />
 					}
 				/>
+				<Route path='/favorites' element={<Favorites />} />
 				<Route path='/about' element={<About />} />
 				<Route path='/detail/:detailId' element={<Detail />} />
-                <Route path="*" element={<NotFound/>} />
+				<Route path='*' element={<NotFound />} />
 			</Routes>
 
-			{pathname.length> 1 && <Footer />}
+			{pathname.length > 1 && <Footer />}
 		</div>
 	);
 }

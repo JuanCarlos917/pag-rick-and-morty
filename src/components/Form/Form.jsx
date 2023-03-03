@@ -1,6 +1,6 @@
 import styles from './Form.module.css';
 import validation from './validate';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function FormLogin({login}) {
     const[userData, setUserData] = useState({
@@ -28,6 +28,11 @@ export default function FormLogin({login}) {
         login(userData)
 
     }
+    useEffect(() => {
+        if (Object.keys(error).length === 0) {
+            login(userData)
+        }
+    }, [error])
 
     return (
 		<div className={styles.container}>
