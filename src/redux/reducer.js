@@ -5,6 +5,7 @@ const {
 	ORDER,
 	ALL_CHARACTERS,
 	SET_ALL_CHARACTERS,
+	CLEAR_FAVORITES,
 } = require('./action-types');
 
 const initialState = {
@@ -56,6 +57,8 @@ const reducer = (state = initialState, action) => {
 				...state,
 				myFavorites: state.allCharacters,
 			};
+        case CLEAR_FAVORITES:
+            return initialState;
 		default:
 			return { ...state };
 	}

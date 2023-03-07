@@ -1,6 +1,7 @@
 import {useDispatch, useSelector} from 'react-redux'
 import Card from '../Card/Card'
 import { filterCards, orderCards, setAllCharacters } from '../../redux/actions';
+import { Link } from 'react-router-dom';
 
 export default function Favorites (){
     const dispatch = useDispatch();
@@ -25,6 +26,12 @@ export default function Favorites (){
 		<div>
 			<h1>My Favorites</h1>
 			<div>
+            <div>
+            <Link to='/home'>
+                <button>Back to home</button>
+            </Link>
+            </div>
+            <button onClick={() => dispatch({type:'CLEAR_FAVORITES'})} >Remove all</button>
 				<select name='order' id='' onChange={handleOrder}>
 					<option value='Ascendente'>Ascendente</option>
 					<option value='Descendente'>Descendente</option>

@@ -4,6 +4,7 @@ import {
 	FILTER,
 	ORDER,
 	SET_ALL_CHARACTERS,
+	CLEAR_FAVORITES,
 } from './action-types';
 
 
@@ -12,7 +13,6 @@ export const addFavorite = (data) => ({
 	type: ADD_FAVORITE,
 	payload: data
 });
-
 
 export const removeFavorite = (id) => ({
 	type: REMOVE_FAVORITE,
@@ -32,3 +32,7 @@ export const orderCards = (id) => ({
 export const setAllCharacters = () => ({
 	type: SET_ALL_CHARACTERS,
 });
+
+export const clearFavorites = () => ({
+    type: CLEAR_FAVORITES,
+})
