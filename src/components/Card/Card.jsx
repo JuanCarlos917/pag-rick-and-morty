@@ -6,9 +6,8 @@ import * as actions from '../../redux/actions';
 
 function Card(props) {
 	const [isFav, setIsFav] = useState(false);
-    console.log("props",props);
 	const { myFavorites } = props;
-
+    console.log(myFavorites);
 	const handleFavorite = () => {
 		setIsFav(!isFav);
 		if (!isFav) {
@@ -50,7 +49,7 @@ function Card(props) {
 				<h2 className={styles.subtitulocard}>{props.name}</h2>
 				<p className={styles.subtitulocard}>Specie: {props.species}</p>
 				<p className={styles.subtitulocard}>Gender: {props.gender}</p>
-				<p className={styles.subtitulocard}>Origin: {props.origin}</p>
+				<p className={styles.subtitulocard}>Id: {props.id}</p>
 			</div>
 			<Link to={`/detail/${props.id} `}>
 				<section>

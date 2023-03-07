@@ -24,7 +24,6 @@ function App() {
 			userData.userName === userName
 		) {
 			setAcces(true);
-				setCharacters([]);
 				navigate('/home');
 		} else {
 			window.alert('Usuario o contraseña incorrectos');
@@ -32,11 +31,7 @@ function App() {
 	}
     useEffect(() => {
 		!access && navigate('/');
-	});
-    //se comenta esta linea ya que [access] genera un error
-    // useEffect(() => {
-	// 	!access && navigate('/');
-	// }, [access]);
+	},[access, navigate]);
 
 	const URL_BASE = 'https://be-a-rym.up.railway.app/api';
 	const API_KEY = '1b88bdb6d72a.fbb4ede0d66b229d0d0b';

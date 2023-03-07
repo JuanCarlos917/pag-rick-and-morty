@@ -1,4 +1,10 @@
-import { ADD_FAVORITE, REMOVE_FAVORITE } from './action-types';
+import {
+	ADD_FAVORITE,
+	REMOVE_FAVORITE,
+	FILTER,
+	ORDER,
+	SET_ALL_CHARACTERS,
+} from './action-types';
 
 
 
@@ -12,4 +18,17 @@ export const removeFavorite = (id) => ({
 	type: REMOVE_FAVORITE,
 	payload: id,
 });
-//pedido a la api
+
+export const filterCards = (gender) => ({
+	type: FILTER,
+	payload: gender === 'Todos' ? null: gender,
+});
+
+export const orderCards = (id) => ({
+    type: ORDER,
+    payload: id,
+});
+
+export const setAllCharacters = () => ({
+	type: SET_ALL_CHARACTERS,
+});

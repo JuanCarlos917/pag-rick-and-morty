@@ -18,8 +18,8 @@ export default function validation (inputs){
     if(!regexPassword.test(inputs.password)){
         errors.password = 'Password must contain at least one number'
     }
-    if(inputs.password.length < 6 || inputs.password.length > 10){
-        errors.password = 'Password must be between 6 and 10 characters'
+    if(inputs.password.length < 7 || inputs.password.length > 10){
+        errors.password = 'Password must be between 7 and 10 characters'
     }
     if(!inputs.password){
         errors.password = 'Password is required'
