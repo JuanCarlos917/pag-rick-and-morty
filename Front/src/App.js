@@ -31,7 +31,7 @@ function App() {
 		!access && navigate('/');
 	}, [access, navigate]);
 
-	const URL_BASE_SERVER = 'http://localhost:3001/rickandmorty/character/'
+	const URL_BASE_SERVER = 'http://localhost:3001/rickandmorty/onsearch/';
 	// const URL_BASE = 'https://be-a-rym.up.railway.app/api';
 	// const API_KEY = '1b88bdb6d72a.fbb4ede0d66b229d0d0b';
 
