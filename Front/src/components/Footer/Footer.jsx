@@ -29,11 +29,8 @@ export default function Footer() {
 					</Link>
 
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Facilis ex impedit mollitia sed? Quisquam veritatis
-						veniam, Lorem ipsum dolor sit amet consectetur
-						adipisicing elit. Facilis ex impedit mollitia sed?
-						Quisquam
+						Rick and Morty es una emocionante aplicación de
+						tecnología que utiliza varias tecnologías de vanguardia ...
 					</p>
 					<h2>SÍGUENOS</h2>
 					<div className={styles.redsocial}>
@@ -51,7 +48,6 @@ export default function Footer() {
 							className={styles.redesociales}
 							id='instagram'
 						/>
-
 						<img
 							src={twitter}
 							alt='logo twitter'
