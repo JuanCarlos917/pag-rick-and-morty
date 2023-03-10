@@ -1,24 +1,18 @@
 import { useState } from 'react';
 import styles from './SearchBar.module.css';
 
-export default function SearchBar({onSearch}) {
+export default function SearchBar({ onSearch }) {
 	const [character, setCharcter] = useState('');
-    console.log('characters', setCharcter);
 
-    const random = () =>{
-        const randomCharacter = Math.floor(Math.random() * 826)
-        setCharcter(randomCharacter);
-        return randomCharacter
-    }
+	const random = () => {
+		const randomCharacter = Math.floor(Math.random() * 826);
+		setCharcter(randomCharacter);
+		return randomCharacter;
+	};
 
 	return (
 		<div className={styles.searchBar}>
-			<button
-				className={styles.searchButton}
-
-			>
-				Clear
-			</button>
+			<button className={styles.searchButton}>Clear</button>
 			<button
 				className={styles.searchButton}
 				onClick={() => onSearch(random())}>
