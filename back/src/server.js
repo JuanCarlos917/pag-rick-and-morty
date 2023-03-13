@@ -1,14 +1,16 @@
-const http = require('http');
-const getCharById = require('./controllers/getCharById');
-const getCharDetail = require('./controllers/getCharDetail');
+const express = require('express');
+const app = express();
 const PORT = 3001;
+const router = require('./routes/index');
 
-http.createServer((req, res) => {
-	res.setHeader('Access-Control-Allow-Origin', '*');
-	const id = req.url.split('/').pop();
+app.listen(PORT, () =>{
+    console.log(`Server is running on port ${PORT}`);
+})
 
-	if (req.url.includes('onsearch')) getCharById(res, id);
+app.use(express, json())
 
-	if (req.url.includes('detail')) getCharDetail(res, id);
+app.use('/', router);
 
-}).listen(PORT, 'localhost');
+
+
+module.exports = app
