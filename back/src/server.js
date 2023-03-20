@@ -1,16 +1,22 @@
 const express = require('express');
-const app = express();
+const cors = require('cors');
+const router = require('../src/routes/index');
+const server = express();
+const morgan = require('morgan');
 const PORT = 3001;
-const router = require('./routes/index');
 
-app.listen(PORT, () =>{
-    console.log(`Server is running on port ${PORT}`);
-})
+const corsOptions = {
+    origin: 'http://localhost:3000',
+}
+server.use(cors(corsOptions));
 
-app.use(express, json())
+server.use(express.json());
+server.use(morgan('dev'));
 
-app.use('/', router);
+server.use('/rickandmorty', router);
 
 
-
-module.exports = app
+server.listen(PORT, () => {
+	console.log(`Server is running on port ${PORT}`);
+});
+module.exports = { server };
